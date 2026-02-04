@@ -1,0 +1,170 @@
+/* =========================
+   Global Reset
+   ========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+
+/* =========================
+   Full Screen Center Layout
+   ========================= */
+.auth-container {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* modern gradient */
+  background: linear-gradient(135deg, #e0f2fe, #eef2ff);
+}
+
+
+/* =========================
+   Card (glass style)
+   ========================= */
+.auth-card {
+  width: 380px;
+  max-width: 95%;
+
+  padding: 40px;
+
+  background: white;
+  border-radius: 16px;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.08),
+    0 4px 10px rgba(0, 0, 0, 0.04);
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+
+/* =========================
+   Heading
+   ========================= */
+.auth-card h2 {
+  text-align: center;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+
+/* =========================
+   Inputs (modern style)
+   ========================= */
+.auth-card input {
+  width: 100%;
+  padding: 13px 14px;
+
+  background: #f9fafb;     /* light grey */
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  font-size: 14px;
+  color: #111;
+
+  transition: all 0.2s ease;
+}
+
+/* remove ugly black autofill */
+.auth-card input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px #f9fafb inset !important;
+  -webkit-text-fill-color: #111 !important;
+}
+
+/* placeholder style */
+.auth-card input::placeholder {
+  color: #9ca3af;
+}
+
+/* focus effect */
+.auth-card input:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+
+/* =========================
+   Button
+   ========================= */
+.auth-card button {
+  padding: 13px;
+
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.auth-card button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.auth-card button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   Links
+   ========================= */
+.auth-card p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.auth-card a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-card a:hover {
+  text-decoration: underline;
+}
+.auth-card p {
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+
+/* =========================
+   Animation
+   ========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
